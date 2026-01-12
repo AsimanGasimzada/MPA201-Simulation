@@ -18,6 +18,9 @@ public class ProductController : Controller
     private readonly string folderPath;
 
 
+
+
+
     public ProductController(AppDbContext context, IWebHostEnvironment environment)
     {
         _context = context;

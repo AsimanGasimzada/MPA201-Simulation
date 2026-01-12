@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 namespace MPA201_Simulation.Controllers;
 public class AccountController(UserManager<AppUser> _userManager, SignInManager<AppUser> _signInManager, RoleManager<IdentityRole> _roleManager) : Controller
 {
+
+
     public IActionResult Login()
     {
         return View();
