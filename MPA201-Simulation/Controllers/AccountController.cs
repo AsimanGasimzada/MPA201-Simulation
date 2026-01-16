@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Mvc;
 using MPA201_Simulation.Models;
 using MPA201_Simulation.ViewModels.UserViewModels;
-using System.Threading.Tasks;
 
 namespace MPA201_Simulation.Controllers;
 public class AccountController(UserManager<AppUser> _userManager, SignInManager<AppUser> _signInManager, RoleManager<IdentityRole> _roleManager) : Controller
@@ -92,14 +91,14 @@ public class AccountController(UserManager<AppUser> _userManager, SignInManager<
     }
 
 
-    public async Task<IActionResult> CreateRoles()
-    {
-        await _roleManager.CreateAsync(new() { Name = "Admin" });
-        await _roleManager.CreateAsync(new() { Name = "Member" });
-        await _roleManager.CreateAsync(new() { Name = "Moderator" });
-        await _roleManager.CreateAsync(new() { Name = "NazarataNazarat" });
+    //public async Task<IActionResult> CreateRoles()
+    //{
+    //    await _roleManager.CreateAsync(new() { Name = "Admin" });
+    //    await _roleManager.CreateAsync(new() { Name = "Member" });
+    //    await _roleManager.CreateAsync(new() { Name = "Moderator" });
+    //    await _roleManager.CreateAsync(new() { Name = "NazarataNazarat" });
 
-        return Ok("Roles was created");
-    }
+    //    return Ok("Roles was created");
+    //}
 
 }
